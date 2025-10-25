@@ -15,4 +15,25 @@ for (anchor of anchors) {
 }
 
 
+// ================= scroll-position ==================
+const upArrow = document.querySelector('.up-arrow');
+
+window.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY;
+  
+  if (scrollPosition > 600)
+    upArrow.classList.add('_active');
+  else
+    upArrow.classList.remove('_active');
+
+});
+// ================= Burger-Button ==================
+const burger = document.querySelector('.burger-btn');
+
+burger.addEventListener('click', ()=>{
+
+  burger.classList.toggle('_active');
+
+
+});
 
