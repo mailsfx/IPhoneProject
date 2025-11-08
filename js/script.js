@@ -21,19 +21,29 @@ const upArrow = document.querySelector('.up-arrow');
 window.addEventListener('scroll', function () {
   const scrollPosition = window.scrollY;
   
-  if (scrollPosition > 600)
+  if (scrollPosition > 600){
     upArrow.classList.add('_active');
+    fn_close();
+  }
   else
     upArrow.classList.remove('_active');
 
 });
+
 // ================= Burger-Button ==================
 const burger = document.querySelector('.burger-btn');
+const menu = document.querySelector('.header_menu');
 
 burger.addEventListener('click', ()=>{
 
   burger.classList.toggle('_active');
-
+  menu.classList.toggle('_active');
 
 });
+// ================= ZAKRIL-FUNCTIU ==================
+function fn_close(){
+  burger.classList.toggle('_active');
+  menu.classList.toggle('_active');
+}
+
 
